@@ -1,0 +1,17 @@
+node_modules/
+dist/
+android/.gradle/
+android/local.properties
+android/**/build/
+*.log
+*.keystore
+*.jks
+.env
+.env.*
+!.env.example
+*.apk
+*.idsig
+.idea/
+*.iml
+Thumbs.db
+.DS_Store

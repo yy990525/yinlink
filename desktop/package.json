@@ -1,0 +1,39 @@
+{
+  "name": "mirrorlink-desktop",
+  "version": "0.8.0",
+  "description": "吟链手机投屏",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "browser": "node server.cjs",
+    "test": "node --test test/*.test.cjs",
+    "build:win": "electron-builder --win portable --x64"
+  },
+  "devDependencies": {
+    "electron": "44.5.1",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "com.mirrorlink.desktop",
+    "productName": "吟链",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.cjs",
+      "server.cjs",
+      "ui/**/*",
+      "package.json",
+      "settings.cjs",
+      "video-hub.cjs", "discovery.cjs", "vendor/**/*"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "artifactName": "MirrorLink-${version}-Windows.exe",
+      "signAndEditExecutable": false
+    }
+  }
+}
